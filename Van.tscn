@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6q5r0gvbdx3e"]
+
+[ext_resource type="Texture2D" uid="uid://dif7i7575w4ph" path="res://Palm Tree Island/Sprites/Background/BG Image.png" id="1_ktiek"]
+[ext_resource type="Texture2D" uid="uid://n35tfl2uod7c" path="res://Palm Tree Island/Sprites/Background/Additional Water.png" id="2_ljbg2"]
+[ext_resource type="Texture2D" uid="uid://baius4mvkv44" path="res://Palm Tree Island/Sprites/Background/Additional Sky.png" id="3_x3uej"]
+[ext_resource type="Texture2D" uid="uid://ctd4jg7fbbqtv" path="res://Palm Tree Island/Sprites/Background/Big Clouds.png" id="6_elh7y"]
+[ext_resource type="Texture2D" uid="uid://xph063u1h2ch" path="res://Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="10_v57wc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BgImage" type="Sprite2D" parent="."]
+position = Vector2(576.5, 277.5)
+scale = Vector2(2.99219, 3.41406)
+texture = ExtResource("1_ktiek")
+
+[node name="BigClouds" type="Sprite2D" parent="."]
+position = Vector2(-92.5066, 261)
+scale = Vector2(0.979911, 1)
+texture = ExtResource("6_elh7y")
+offset = Vector2(1045, 45)
+
+[node name="SmallCloud1" type="Sprite2D" parent="."]
+position = Vector2(477, 318)
+scale = Vector2(2.39189, 2.70833)
+texture = ExtResource("10_v57wc")
+
+[node name="BigClouds2" type="Sprite2D" parent="."]
+position = Vector2(491, 305.75)
+scale = Vector2(1, 1.00495)
+texture = ExtResource("6_elh7y")
+
+[node name="BigClouds3" type="Sprite2D" parent="."]
+position = Vector2(134.75, 304)
+scale = Vector2(0.592634, 1)
+texture = ExtResource("6_elh7y")
+
+[node name="AdditionalWater" type="Sprite2D" parent="."]
+position = Vector2(576.5, 569.25)
+scale = Vector2(35.9062, 5.35937)
+texture = ExtResource("2_ljbg2")
+
+[node name="AdditionalSky" type="Sprite2D" parent="."]
+position = Vector2(576.5, 51.25)
+scale = Vector2(35.9063, 3.04688)
+texture = ExtResource("3_x3uej")
