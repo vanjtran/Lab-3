@@ -1,77 +1,45 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6q5r0gvbdx3e"]
+[gd_scene load_steps=6 format=3 uid="uid://b6q5r0gvbdx3e"]
 
 [ext_resource type="Texture2D" uid="uid://dif7i7575w4ph" path="res://Palm Tree Island/Sprites/Background/BG Image.png" id="1_ktiek"]
 [ext_resource type="Texture2D" uid="uid://n35tfl2uod7c" path="res://Palm Tree Island/Sprites/Background/Additional Water.png" id="2_ljbg2"]
 [ext_resource type="Texture2D" uid="uid://baius4mvkv44" path="res://Palm Tree Island/Sprites/Background/Additional Sky.png" id="3_x3uej"]
-[ext_resource type="Texture2D" uid="uid://dngp8pb0cjewt" path="res://Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="4_o25iw"]
-[ext_resource type="Texture2D" uid="uid://c17udwsqlrclj" path="res://Palm Tree Island/Sprites/Background/Small Cloud 2.png" id="5_dreb0"]
 [ext_resource type="Texture2D" uid="uid://ctd4jg7fbbqtv" path="res://Palm Tree Island/Sprites/Background/Big Clouds.png" id="6_elh7y"]
-[ext_resource type="Texture2D" uid="uid://beuhrj88lihbd" path="res://Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" id="7_p14ru"]
-[ext_resource type="Texture2D" uid="uid://yp6ov2ipqemt" path="res://Palm Tree Island/Sprites/Background/Water Reflect Big 02.png" id="8_jybxc"]
-[ext_resource type="Texture2D" uid="uid://cowhovkd5g23h" path="res://Palm Tree Island/Sprites/Background/Water Reflect Medium 02.png" id="9_4cqoa"]
 [ext_resource type="Texture2D" uid="uid://xph063u1h2ch" path="res://Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="10_v57wc"]
-[ext_resource type="Texture2D" uid="uid://bjeavxlma41e" path="res://Palm Tree Island/Sprites/Objects/Chest/Chest Close 01.png" id="11_vxwkm"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="BgImage" type="Sprite2D" parent="."]
-position = Vector2(574.5, 433)
-scale = Vector2(2.99219, 1)
+position = Vector2(576.5, 277.5)
+scale = Vector2(2.99219, 3.41406)
 texture = ExtResource("1_ktiek")
 
-[node name="AdditionalWater4" type="Sprite2D" parent="BgImage"]
-position = Vector2(-0.168552, 133)
-scale = Vector2(12.0314, 5.09375)
-texture = ExtResource("2_ljbg2")
-
-[node name="AdditionalSky" type="Sprite2D" parent="BgImage"]
-position = Vector2(-0.0829999, -245)
-scale = Vector2(12.0261, 11.375)
-texture = ExtResource("3_x3uej")
-
-[node name="SmallCloud3" type="Sprite2D" parent="."]
-position = Vector2(250.5, 142.25)
-scale = Vector2(1.95, 1.62821)
-texture = ExtResource("4_o25iw")
-
-[node name="SmallCloud2" type="Sprite2D" parent="."]
-position = Vector2(1206, 262)
-scale = Vector2(1.7406, 2.3)
-texture = ExtResource("5_dreb0")
-offset = Vector2(-437.636, -25.3261)
-
 [node name="BigClouds" type="Sprite2D" parent="."]
-position = Vector2(-123, 319)
+position = Vector2(-92.5066, 261)
+scale = Vector2(0.979911, 1)
 texture = ExtResource("6_elh7y")
 offset = Vector2(1045, 45)
 
-[node name="WaterReflectBig01" type="Sprite2D" parent="."]
-position = Vector2(239, 571.5)
-scale = Vector2(1.2, 2.9)
-texture = ExtResource("7_p14ru")
-
-[node name="WaterReflectBig02" type="Sprite2D" parent="."]
-position = Vector2(554, 545)
-texture = ExtResource("8_jybxc")
-
-[node name="WaterReflectMedium02" type="Sprite2D" parent="."]
-position = Vector2(710, 586)
-texture = ExtResource("9_4cqoa")
-
 [node name="SmallCloud1" type="Sprite2D" parent="."]
-position = Vector2(453, 379)
+position = Vector2(477, 318)
 scale = Vector2(2.39189, 2.70833)
 texture = ExtResource("10_v57wc")
 
 [node name="BigClouds2" type="Sprite2D" parent="."]
-position = Vector2(474, 364)
+position = Vector2(491, 305.75)
+scale = Vector2(1, 1.00495)
 texture = ExtResource("6_elh7y")
 
 [node name="BigClouds3" type="Sprite2D" parent="."]
-position = Vector2(26, 364)
+position = Vector2(134.75, 304)
+scale = Vector2(0.592634, 1)
 texture = ExtResource("6_elh7y")
 
-[node name="ChestClose01" type="Sprite2D" parent="."]
-position = Vector2(-258, 732)
-scale = Vector2(1.53906, 2.46429)
-texture = ExtResource("11_vxwkm")
+[node name="AdditionalWater" type="Sprite2D" parent="."]
+position = Vector2(576.5, 569.25)
+scale = Vector2(35.9062, 5.35937)
+texture = ExtResource("2_ljbg2")
+
+[node name="AdditionalSky" type="Sprite2D" parent="."]
+position = Vector2(576.5, 51.25)
+scale = Vector2(35.9063, 3.04688)
+texture = ExtResource("3_x3uej")
