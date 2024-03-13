@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d285470ukkswm"]
+
+[ext_resource type="Texture2D" uid="uid://0wbnnoj0rnqt" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_anpp3"]
+
+[node name="the background" type="Node2D"]
+
+[node name="Background" type="ParallaxBackground" parent="."]
+scale = Vector2(21.5285, 42.6523)
+transform = Transform2D(21.5285, 0, 0, 42.6523, 0, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+texture_filter = 1
+texture_repeat = 3
+motion_mirroring = Vector2(16, 64)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
+position = Vector2(-1.3006, -0.0234456)
+texture = ExtResource("1_anpp3")
+centered = false
