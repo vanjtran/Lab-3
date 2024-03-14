@@ -1,13 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn6wfn0d7ou7g"]
+[gd_scene load_steps=7 format=3 uid="uid://dn6wfn0d7ou7g"]
 
 [ext_resource type="Texture2D" uid="uid://pbnmpgjw0thr" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Objects/Simple_Milk_and_grass_item.png" id="1_p0p07"]
-
-[sub_resource type="GDScript" id="GDScript_ltrnx"]
-script/source = "extends Area2D
-
-	
-
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fiyfl"]
 atlas = ExtResource("1_p0p07")
@@ -43,12 +36,12 @@ radius = 6.0
 height = 16.0
 
 [node name="Collectables" type="Area2D"]
-script = SubResource("GDScript_ltrnx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(17, 12)
 sprite_frames = SubResource("SpriteFrames_ndytc")
-frame_progress = 0.333531
+frame_progress = 0.190057
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(17, 13)

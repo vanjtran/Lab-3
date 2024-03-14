@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b26t7ir3p85tj"]
 
-[ext_resource type="Script" path="res://Eri/Characters/the_cat.gd" id="1_qpdd6"]
 [ext_resource type="Texture2D" uid="uid://c5wqwpbq4mayb" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_txvgx"]
+[ext_resource type="Script" path="res://Eri/Characters/the_cat.gd" id="1_u7d15"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5pv0"]
 atlas = ExtResource("1_txvgx")
@@ -102,15 +102,13 @@ animations = [{
 }]
 
 [node name="The cat" type="Node2D"]
-position = Vector2(47, -4)
-script = ExtResource("1_qpdd6")
+script = ExtResource("1_u7d15")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_7kxei")
-animation = &"walk_right"
+animation = &"walk_up"
 autoplay = "walk_down"
-frame_progress = 0.600711
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(8, 8)
