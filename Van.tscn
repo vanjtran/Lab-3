@@ -9,7 +9,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="BgImage" type="Sprite2D" parent="."]
-position = Vector2(576.5, 277.5)
+position = Vector2(577, 279)
 scale = Vector2(2.99219, 3.41406)
 texture = ExtResource("1_ktiek")
 
