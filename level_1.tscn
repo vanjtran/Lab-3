@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://co04ncm8ikcxs"]
+
+[ext_resource type="PackedScene" uid="uid://d285470ukkswm" path="res://Eri/Background/the_background.tscn" id="1_cola0"]
+[ext_resource type="PackedScene" uid="uid://bhi3gkj5x1o38" path="res://Eri/Levels/game_level.tscn" id="2_3mbpu"]
+[ext_resource type="PackedScene" uid="uid://or1djupun6df" path="res://Eri/obstacle/obstacle.tscn" id="3_5dox8"]
+[ext_resource type="PackedScene" uid="uid://dn6wfn0d7ou7g" path="res://Eri/the collectables/collectables.tscn" id="4_n7tp1"]
+[ext_resource type="PackedScene" uid="uid://d0kf0dmx7b883" path="res://Eri/the exit/exit.tscn" id="5_vmwvb"]
+[ext_resource type="PackedScene" uid="uid://b26t7ir3p85tj" path="res://Eri/Characters/the_cat.tscn" id="6_nhfyg"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="the background" parent="." instance=ExtResource("1_cola0")]
+position = Vector2(243, 13)
+
+[node name="Game level" parent="." instance=ExtResource("2_3mbpu")]
+position = Vector2(-16, 338)
+
+[node name="obstacle" parent="." instance=ExtResource("3_5dox8")]
+position = Vector2(350, 309)
+
+[node name="Collectables" parent="." instance=ExtResource("4_n7tp1")]
+position = Vector2(637, 149)
+
+[node name="Exit" parent="." instance=ExtResource("5_vmwvb")]
+position = Vector2(1461, 378)
+
+[node name="The cat" parent="." instance=ExtResource("6_nhfyg")]
+position = Vector2(27, 551)
