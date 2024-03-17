@@ -8,21 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://b26t7ir3p85tj" path="res://Eri/Characters/the_cat.tscn" id="6_nhfyg"]
 
 [node name="Level 1" type="Node2D"]
+y_sort_enabled = true
 
 [node name="the background" parent="." instance=ExtResource("1_cola0")]
-position = Vector2(243, 13)
+position = Vector2(2, 0)
 
 [node name="Game level" parent="." instance=ExtResource("2_3mbpu")]
-position = Vector2(-16, 338)
-
-[node name="obstacle" parent="." instance=ExtResource("3_5dox8")]
-position = Vector2(350, 309)
-
-[node name="Collectables" parent="." instance=ExtResource("4_n7tp1")]
-position = Vector2(637, 149)
+y_sort_enabled = true
+position = Vector2(41, 299)
 
 [node name="Exit" parent="." instance=ExtResource("5_vmwvb")]
-position = Vector2(1461, 378)
+
+[node name="obstacle" parent="." instance=ExtResource("3_5dox8")]
+position = Vector2(382, 358)
+
+[node name="Collectables" parent="." instance=ExtResource("4_n7tp1")]
+position = Vector2(1016, 314)
 
 [node name="The cat" parent="." instance=ExtResource("6_nhfyg")]
-position = Vector2(27, 551)
+position = Vector2(39, 459)

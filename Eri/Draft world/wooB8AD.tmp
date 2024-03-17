@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dohc4qqwuud7s"]
+
+[ext_resource type="Texture2D" uid="uid://dxht2xogirq4" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Objects/Wood_Bridge.png" id="1_uuuvg"]
+[ext_resource type="Texture2D" uid="uid://cn410gvx8xuob" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="2_smiem"]
+[ext_resource type="PackedScene" uid="uid://b26t7ir3p85tj" path="res://Eri/Characters/the_cat.tscn" id="3_i5ne8"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(136, 82)
+texture = ExtResource("1_uuuvg")
+
+[node name="Fences" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-10, 47)
+texture = ExtResource("2_smiem")
+
+[node name="Fences2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(44, 47)
+texture = ExtResource("2_smiem")
+
+[node name="The cat" parent="." instance=ExtResource("3_i5ne8")]
+position = Vector2(-23, -6)
+
+[node name="Area2D" type="Area2D" parent="."]
