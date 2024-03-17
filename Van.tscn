@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6q5r0gvbdx3e"]
+[gd_scene load_steps=15 format=3 uid="uid://b6q5r0gvbdx3e"]
 
 [ext_resource type="Texture2D" uid="uid://bo4ndptqjb7qh" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Background/BG Image.png" id="1_05f0t"]
 [ext_resource type="Texture2D" uid="uid://b8xgjg2rd2g5n" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Background/Big Clouds.png" id="2_2i05h"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b5rrsivnt08is" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Background/Additional Sky.png" id="9_4phs4"]
 [ext_resource type="Texture2D" uid="uid://bs6k5giql67km" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="10_4ubuj"]
 [ext_resource type="PackedScene" uid="uid://pjwmekpa1mub" path="res://Character.tscn" id="11_gwcqf"]
+[ext_resource type="Script" path="res://Character.gd" id="12_bioq6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5mbg"]
 texture = ExtResource("10_4ubuj")
@@ -321,3 +322,4 @@ layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 131072, 0, 2, 196608, 0, 3,
 
 [node name="Node2D" parent="." instance=ExtResource("11_gwcqf")]
 position = Vector2(36, 262)
+script = ExtResource("12_bioq6")
