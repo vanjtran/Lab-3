@@ -17,11 +17,16 @@ scale = Vector2(18.0156, 40.5625)
 texture = ExtResource("1_anpp3")
 
 [node name="Water3" type="Sprite2D" parent="."]
-position = Vector2(2861, 325)
-scale = Vector2(18.0156, 40.5625)
+position = Vector2(2861, 325.25)
+scale = Vector2(18.0156, 40.5313)
 texture = ExtResource("1_anpp3")
 
 [node name="Water4" type="Sprite2D" parent="."]
 position = Vector2(4010, 325)
+scale = Vector2(18.0156, 40.5625)
+texture = ExtResource("1_anpp3")
+
+[node name="Water5" type="Sprite2D" parent="."]
+position = Vector2(5161, 325)
 scale = Vector2(18.0156, 40.5625)
 texture = ExtResource("1_anpp3")

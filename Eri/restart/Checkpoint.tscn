@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://c74egumtn5qov"]
+
+[ext_resource type="Script" path="res://Eri/checkpoint/checkpoint.gd" id="1_gspv0"]
+[ext_resource type="Texture2D" uid="uid://bl4bnwrav8oom" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Dialogue/Exclamation/Exclamation Out 01.png" id="2_xuggb"]
+[ext_resource type="Texture2D" uid="uid://s2wa13pygkri" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Dialogue/Exclamation/Exclamation Out 02.png" id="3_4jlam"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvdn4"]
+
+[sub_resource type="Animation" id="Animation_rctxs"]
+resource_name = "Activated"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_xuggb"), ExtResource("2_xuggb"), ExtResource("2_xuggb"), ExtResource("2_xuggb"), ExtResource("3_4jlam")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cche3"]
+_data = {
+"Activated": SubResource("Animation_rctxs")
+}
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_gspv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_xuggb")
+
+[node name="Area2D" type="Area2D" parent="."]
+texture_filter = 1
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yvdn4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cche3")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

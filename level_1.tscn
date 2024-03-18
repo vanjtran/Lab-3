@@ -1,29 +1,33 @@
 [gd_scene load_steps=7 format=3 uid="uid://co04ncm8ikcxs"]
 
 [ext_resource type="PackedScene" uid="uid://d285470ukkswm" path="res://Eri/Background/the_background.tscn" id="1_cola0"]
-[ext_resource type="PackedScene" uid="uid://bhi3gkj5x1o38" path="res://Eri/Levels/game_level.tscn" id="2_3mbpu"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_ychsk"]
 [ext_resource type="PackedScene" uid="uid://or1djupun6df" path="res://Eri/obstacle/obstacle.tscn" id="3_5dox8"]
-[ext_resource type="PackedScene" uid="uid://dn6wfn0d7ou7g" path="res://Eri/the collectables/collectables.tscn" id="4_n7tp1"]
-[ext_resource type="PackedScene" uid="uid://d0kf0dmx7b883" path="res://Eri/the exit/exit.tscn" id="5_vmwvb"]
+[ext_resource type="PackedScene" uid="uid://c74egumtn5qov" path="res://Eri/restart/Checkpoint.tscn" id="6_2i8tu"]
+[ext_resource type="PackedScene" uid="uid://cslvkkgrpaqq8" path="res://Eri/Levels/eri_platform_2.tscn" id="6_6ewmh"]
 [ext_resource type="PackedScene" uid="uid://b26t7ir3p85tj" path="res://Eri/Characters/the_cat.tscn" id="6_nhfyg"]
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" node_paths=PackedStringArray("level_start_pos")]
 y_sort_enabled = true
+script = ExtResource("1_ychsk")
+level_start_pos = NodePath("Checkpoint")
 
 [node name="the background" parent="." instance=ExtResource("1_cola0")]
 position = Vector2(2, 0)
 
-[node name="Game level" parent="." instance=ExtResource("2_3mbpu")]
-y_sort_enabled = true
-position = Vector2(41, 299)
-
-[node name="Exit" parent="." instance=ExtResource("5_vmwvb")]
+[node name="the background2" parent="." instance=ExtResource("1_cola0")]
+position = Vector2(2, 650)
 
 [node name="obstacle" parent="." instance=ExtResource("3_5dox8")]
-position = Vector2(382, 358)
-
-[node name="Collectables" parent="." instance=ExtResource("4_n7tp1")]
-position = Vector2(1016, 314)
+position = Vector2(422, 321)
+rotation = -0.038652
+scale = Vector2(1.25, 1.25)
 
 [node name="The cat" parent="." instance=ExtResource("6_nhfyg")]
-position = Vector2(39, 459)
+position = Vector2(31, 321)
+
+[node name="Eri platform 2" parent="." instance=ExtResource("6_6ewmh")]
+position = Vector2(-3865, 52)
+
+[node name="Checkpoint" parent="." instance=ExtResource("6_2i8tu")]
+position = Vector2(558, 332)

@@ -102,24 +102,25 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqhvm"]
-size = Vector2(12, 4)
+size = Vector2(23, 15)
 
 [node name="The cat" type="CharacterBody2D"]
-collision_layer = 3
-collision_mask = 3
+texture_filter = 1
+position = Vector2(0, -1)
 script = ExtResource("1_u7d15")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0, -8)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_7kxei")
-animation = &"walk_up"
+animation = &"walk_right"
 autoplay = "walk_down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(10.005, 10.005)
+zoom = Vector2(3.765, 3.765)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0.5, 7.5)
 shape = SubResource("RectangleShape2D_xqhvm")
