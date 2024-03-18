@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b26t7ir3p85tj"]
+[gd_scene load_steps=14 format=3 uid="uid://b26t7ir3p85tj"]
 
 [ext_resource type="Texture2D" uid="uid://c5wqwpbq4mayb" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_txvgx"]
 [ext_resource type="Script" path="res://Eri/Characters/the_cat.gd" id="1_u7d15"]
@@ -101,25 +101,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqhvm"]
-size = Vector2(12, 4)
-
 [node name="The cat" type="CharacterBody2D"]
-collision_layer = 3
-collision_mask = 3
 script = ExtResource("1_u7d15")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
-y_sort_enabled = true
 texture_filter = 1
-position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_7kxei")
 animation = &"walk_up"
 autoplay = "walk_down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(10.005, 10.005)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_xqhvm")

@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpkv1cj4dpibp"]
+[gd_scene load_steps=6 format=3 uid="uid://bpkv1cj4dpibp"]
 
 [ext_resource type="PackedScene" uid="uid://d285470ukkswm" path="res://Eri/Background/the_background.tscn" id="1_do2js"]
 [ext_resource type="PackedScene" uid="uid://bhi3gkj5x1o38" path="res://Eri/Levels/game_level.tscn" id="2_q0a01"]
 [ext_resource type="PackedScene" uid="uid://or1djupun6df" path="res://Eri/obstacle/obstacle.tscn" id="3_6nk3p"]
 [ext_resource type="PackedScene" uid="uid://b26t7ir3p85tj" path="res://Eri/Characters/the_cat.tscn" id="4_3cpr0"]
 [ext_resource type="PackedScene" uid="uid://dn6wfn0d7ou7g" path="res://Eri/the collectables/collectables.tscn" id="5_kjcep"]
-[ext_resource type="PackedScene" uid="uid://d0kf0dmx7b883" path="res://Eri/the exit/exit.tscn" id="6_3ulnf"]
 
 [node name="Total game" type="Node2D"]
 position = Vector2(143, 185)
@@ -26,6 +25,3 @@ position = Vector2(-50, 234)
 
 [node name="Collectables" parent="." instance=ExtResource("5_kjcep")]
 position = Vector2(869, 87)
-
-[node name="Exit" parent="." instance=ExtResource("6_3ulnf")]
-position = Vector2(1558, 211)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0kf0dmx7b883"]
+[gd_scene load_steps=6 format=3 uid="uid://d0kf0dmx7b883"]
 
 [ext_resource type="Texture2D" uid="uid://e554v0qgg001" path="res://Eri/Art/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="1_wh4we"]
+[ext_resource type="Script" path="res://Eri/the exit/Area2D.gd" id="2_jl271"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qme2"]
 texture = ExtResource("1_wh4we")
@@ -109,17 +110,22 @@ sources/0 = SubResource("TileSetAtlasSource_4qme2")
 size = Vector2(6.91211, 3.19291)
 
 [node name="Exit" type="Node2D"]
+texture_filter = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_i8q7p")
 collision_animatable = true
 format = 2
-layer_0/tile_data = PackedInt32Array(65538, 196608, 0, 131074, 196608, 1)
+layer_0/tile_data = PackedInt32Array(65538, 196608, 0, 131074, 196608, 3)
 
 [node name="Area2D" type="Area2D" parent="TileMap"]
+script = ExtResource("2_jl271")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
 position = Vector2(40, 41)
 scale = Vector2(2.20766, 4.38471)
 shape = SubResource("RectangleShape2D_wal5x")
+
+[connection signal="body_entered" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_body_exited"]

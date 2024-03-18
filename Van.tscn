@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cl801jcsxieai" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Background/Water Reflect Small 04.png" id="8_f2cbt"]
 [ext_resource type="Texture2D" uid="uid://b5rrsivnt08is" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Background/Additional Sky.png" id="9_4phs4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="BgImage" type="Sprite2D" parent="."]
 position = Vector2(1569, 233)
