@@ -1,23 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://pjwmekpa1mub"]
+[gd_scene load_steps=2 format=3 uid="uid://pjwmekpa1mub"]
 
-[ext_resource type="Texture2D" uid="uid://bhy3qfnd2g68r" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="1_1kqh2"]
-[ext_resource type="Script" path="res://starsfish.gd" id="2_vjsyi"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_j4qdk"]
-radius = 14.0357
+[ext_resource type="Texture2D" uid="uid://kgt5v15kmrai" path="res://icon.svg" id="1_6b1wd"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(13, 2)
-shape = SubResource("CircleShape2D_j4qdk")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
-
-[node name="Run01" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D"]
-position = Vector2(1, -1)
-rotation = 3.14159
-scale = Vector2(0.880001, -1)
-texture = ExtResource("1_1kqh2")
-script = ExtResource("2_vjsyi")
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(36.5, 372.5)
+scale = Vector2(0.242188, 0.242187)
+texture = ExtResource("1_6b1wd")
