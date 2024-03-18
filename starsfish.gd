@@ -1,7 +1,9 @@
 extends Sprite2D
 
-var speed = 750
-# Called when the node enters the scene tree for the first time.
+@export var speed = 300.0
+@export var jump_height = -400.0
+
+
 func _ready():
 	pass # Replace with function body.
 
