@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="uid://qdd4s0htpspe"]
+
+[ext_resource type="Script" path="res://Van/Starfish.gd" id="1_23c3c"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" id="2_emqbm"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" id="3_p5dro"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" id="4_cuvmk"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="5_ot8t0"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="6_yqwrw"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="7_qmx7l"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="8_rrlwm"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="9_vsacf"]
+[ext_resource type="Texture2D" path="res://Van/Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="10_r3ty8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j4qdk"]
+radius = 14.0357
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwq7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_emqbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p5dro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cuvmk")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ot8t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yqwrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qmx7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rrlwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vsacf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r3ty8")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_23c3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_j4qdk")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 1)
+rotation = 3.14159
+scale = Vector2(1.15094, -1.21122)
+sprite_frames = SubResource("SpriteFrames_fwq7w")
+animation = &"running"
+frame_progress = 0.221296
+
+[node name="Camera2D" type="Camera2D" parent="."]

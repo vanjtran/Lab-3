@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://bkt1x5n8oiaul"]
+
+[ext_resource type="Script" path="res://Van/The Starfish.gd" id="1_7tvda"]
+[ext_resource type="Texture2D" uid="uid://cwk2josi4087t" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="2_16q4g"]
+[ext_resource type="Texture2D" uid="uid://bhy3qfnd2g68r" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="3_vpt66"]
+[ext_resource type="Texture2D" uid="uid://beas4guac6vpf" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="4_n4s4m"]
+[ext_resource type="Texture2D" uid="uid://coa3bink46yee" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="5_16407"]
+[ext_resource type="Texture2D" uid="uid://bh1ek1tl6ov70" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="6_laqxb"]
+[ext_resource type="Texture2D" uid="uid://byf33s47uwdiw" path="res://Treasure Hunters 2/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="7_wmhgh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rikxm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fkk1o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_16q4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vpt66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n4s4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_16407")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_laqxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wmhgh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Starfish" type="CharacterBody2D"]
+position = Vector2(669, 279)
+script = ExtResource("1_7tvda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-654, 39.0001)
+shape = SubResource("CapsuleShape2D_rikxm")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-650, 39.0001)
+scale = Vector2(-1.26118, 1)
+sprite_frames = SubResource("SpriteFrames_fkk1o")
+frame_progress = 0.853242
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-657, 31.0001)
+scale = Vector2(-2.5998, -1188.34)
