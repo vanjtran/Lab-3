@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkbb4iatledes"]
+
+[ext_resource type="Script" path="res://Eri/Killbox.gd" id="1_alcv1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myhb7"]
+size = Vector2(9507, 153)
+
+[node name="obstacles" type="Node2D"]
+
+[node name="Killbox" type="Area2D" parent="."]
+script = ExtResource("1_alcv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+position = Vector2(4743.5, 66.5)
+shape = SubResource("RectangleShape2D_myhb7")
+
+[connection signal="body_entered" from="Killbox" to="Killbox" method="_on_body_entered"]

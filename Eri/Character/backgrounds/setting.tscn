@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2qjbawgnnasc"]
+
+[ext_resource type="Texture2D" uid="uid://cn1i5fmxfehol" path="res://Eri/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_7vp6g"]
+
+[node name="setting" type="Node2D"]
+
+[node name="Water" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576.5, 324)
+scale = Vector2(18.0156, 40.25)
+texture = ExtResource("1_7vp6g")
+
+[node name="Water2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1720, 324)
+scale = Vector2(17.9531, 40.25)
+texture = ExtResource("1_7vp6g")
+
+[node name="Water3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2863, 324)
+scale = Vector2(17.9531, 40.25)
+texture = ExtResource("1_7vp6g")
+
+[node name="Water4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4011, 323)
+scale = Vector2(17.9531, 40.25)
+texture = ExtResource("1_7vp6g")
+
+[node name="Water5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5155, 324)
+scale = Vector2(17.9531, 40.25)
+texture = ExtResource("1_7vp6g")
+
+[node name="Water6" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(6303, 324)
+scale = Vector2(17.9531, 40.25)
+texture = ExtResource("1_7vp6g")
+
+[node name="Water7" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3439.5, 957)
+scale = Vector2(107.453, 40.25)
+texture = ExtResource("1_7vp6g")

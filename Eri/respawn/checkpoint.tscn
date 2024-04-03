@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctndh57i673j7"]
+
+[ext_resource type="Script" path="res://Eri/respawn/checkpoint.gd" id="1_wb0xh"]
+[ext_resource type="Texture2D" uid="uid://dmfajq80nbmo6" path="res://Eri/Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="2_c7jat"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eegeq"]
+atlas = ExtResource("2_c7jat")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh323"]
+atlas = ExtResource("2_c7jat")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjumr"]
+atlas = ExtResource("2_c7jat")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h5r4f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eegeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh323")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjumr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bxdc4"]
+radius = 7.0
+
+[node name="Checkpoints" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_wb0xh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_h5r4f")
+autoplay = "default"
+frame_progress = 0.334379
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_bxdc4")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

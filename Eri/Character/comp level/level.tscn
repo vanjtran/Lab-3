@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://b51bfbjrjo2s3"]
+
+[ext_resource type="PackedScene" uid="uid://d2qjbawgnnasc" path="res://Eri/Character/backgrounds/setting.tscn" id="1_7hv6r"]
+[ext_resource type="PackedScene" uid="uid://c8fl7urpoxq6x" path="res://Eri/Character/cat.tscn" id="2_pk0vx"]
+[ext_resource type="PackedScene" uid="uid://dlqaw3epoehu8" path="res://Eri/platform/tiles.tscn" id="3_t6hy0"]
+[ext_resource type="PackedScene" uid="uid://erfv6d6gy42d" path="res://Eri/object/spike.tscn" id="4_eldd0"]
+[ext_resource type="PackedScene" uid="uid://ctndh57i673j7" path="res://Eri/respawn/checkpoint.tscn" id="5_ow13i"]
+[ext_resource type="PackedScene" uid="uid://dkbb4iatledes" path="res://Eri/object/obstacles.tscn" id="6_cv12g"]
+[ext_resource type="PackedScene" uid="uid://8qy7nc6f1isa" path="res://Eri/collectables/milk.tscn" id="7_gny3f"]
+
+[node name="level" type="Node2D"]
+
+[node name="setting" parent="." instance=ExtResource("1_7hv6r")]
+position = Vector2(-5, 7)
+
+[node name="Cat" parent="." instance=ExtResource("2_pk0vx")]
+position = Vector2(24, 345)
+
+[node name="Tiles" parent="." instance=ExtResource("3_t6hy0")]
+position = Vector2(-8, -16)
+
+[node name="spike" parent="." instance=ExtResource("4_eldd0")]
+position = Vector2(411, 349)
+
+[node name="Checkpoints" parent="." instance=ExtResource("5_ow13i")]
+position = Vector2(25, 296)
+
+[node name="Spawn1" type="Marker2D" parent="Checkpoints"]
+texture_filter = 1
+
+[node name="obstacles" parent="." instance=ExtResource("6_cv12g")]
+position = Vector2(6, 779)
+
+[node name="milk" parent="." instance=ExtResource("7_gny3f")]
+position = Vector2(217, 359)
+scale = Vector2(1.1, 1.1)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=38 format=3 uid="uid://dpyy7646d0o5x"]
+[gd_scene load_steps=40 format=3 uid="uid://dpyy7646d0o5x"]
 
 [ext_resource type="Texture2D" uid="uid://bs6k5giql67km" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_1d0x3"]
 [ext_resource type="PackedScene" uid="uid://ovc1du2cgi8y" path="res://Van/Backgrounf.tscn" id="1_8ah5e"]
 [ext_resource type="PackedScene" uid="uid://bkt1x5n8oiaul" path="res://Van/Starfish.tscn" id="2_yrqnj"]
 [ext_resource type="Texture2D" uid="uid://ivv6gy43ayka" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="2_yy4y5"]
+[ext_resource type="Texture2D" uid="uid://c0gu8t5hpoflg" path="res://Eri/Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="4_nd4po"]
+[ext_resource type="Script" path="res://Van/Finish line.gd" id="5_ahvja"]
 [ext_resource type="Texture2D" uid="uid://dmgodmwccic78" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png" id="10_m13xt"]
 [ext_resource type="Texture2D" uid="uid://cj81nu0asv44t" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 02.png" id="11_uib24"]
 [ext_resource type="Texture2D" uid="uid://dgwyfumr50nrb" path="res://Treasure Hunters 2/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 03.png" id="12_ug3t2"]
@@ -29,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://kvk34xi5yteo" path="res://Treasure Hunters 2/Pirate Treasure/Sprites/Blue Diamond/04.png" id="44_omtw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0watk"]
-size = Vector2(35, 20)
+size = Vector2(21.406, 46.2865)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ug27"]
 animations = [{
@@ -900,14 +902,19 @@ position = Vector2(-429, -426)
 position = Vector2(430, 433)
 shape = SubResource("RectangleShape2D_0watk")
 
-[node name="Spikes2" type="Sprite2D" parent="Node2D2"]
-texture = ExtResource("2_yy4y5")
+[node name="Finish line" type="Sprite2D" parent="Node2D2"]
+z_index = 3
+position = Vector2(727, -78)
+scale = Vector2(0.513871, 1.00517)
+texture = ExtResource("4_nd4po")
+script = ExtResource("5_ahvja")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D2/Spikes2"]
-position = Vector2(-429, -426)
+[node name="area" type="Area2D" parent="Node2D2/Finish line"]
+position = Vector2(0, -2.98456)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Spikes2/StaticBody2D"]
-position = Vector2(1162, 370)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Finish line/area"]
+position = Vector2(-8.75708, 8.69214)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0watk")
 
 [node name="Front Palm Tree" type="AnimatedSprite2D" parent="Node2D2"]
@@ -1031,6 +1038,7 @@ script = ExtResource("27_pitee")
 position = Vector2(817.5, 705)
 shape = SubResource("RectangleShape2D_3xj18")
 
+[connection signal="body_entered" from="Node2D2/Finish line/area" to="Node2D2/Finish line" method="_on_area_body_entered"]
 [connection signal="body_entered" from="Collectable/Area2D" to="Collectable/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Diamonds" to="Node2D/Diamonds" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Diamonds2" to="Node2D/Diamonds2" method="_on_body_entered"]
